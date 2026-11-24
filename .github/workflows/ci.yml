@@ -18,6 +18,23 @@ jobs:
     defaults:
       run:
         working-directory: apps/api
+    # Postgres de verdade para testar as migrações (os testes usam SQLite em memória).
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: treinos
+          POSTGRES_PASSWORD: treinos
+          POSTGRES_DB: treinos
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U treinos -d treinos"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    env:
+      DATABASE_URL: postgresql+psycopg://treinos:treinos@localhost:5432/treinos
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v6
@@ -30,6 +47,16 @@ jobs:
         run: uv run ruff format --check .
       - name: Testes (pytest)
         run: uv run pytest
+      - name: Migrações no Postgres (sobe, desce e sobe de novo)
+        run: |
+          uv run alembic upgrade head
+          uv run alembic downgrade base
+          uv run alembic upgrade head
+      - name: Seed no Postgres (com os dados de exemplo dos testes, 2x para provar que não duplica)
+        run: |
+          for i in 1 2; do
+            uv run python -m app.seed.exercises --source tests/fixtures/exercises_sample.json --translations tests/fixtures/exercises_pt_br_sample.csv
+          done
       - name: openapi.json está atualizado?
         run: |
           uv run python -m app.export_openapi
