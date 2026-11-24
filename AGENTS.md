@@ -49,6 +49,20 @@ App (rodar dentro de `apps/mobile`):
 
 Banco (na raiz do repo): `docker compose up -d db`
 
+## Como pegar uma tarefa
+
+Quando a pessoa pedir algo como "pega minha próxima tarefa":
+
+1. Descubra quem é (`gh api user -q .login`) e liste as issues dela: `gh issue list --assignee @me --state open`.
+2. Cada issue tem a seção **"Quem faz e do que depende"**. Escolha a de menor semana (etiqueta `semana-N`) cujas dependências já estão prontas, ou seja, com a issue fechada (`gh issue view N --json state`). Se a issue tiver duas pessoas, faça **só a parte de quem pediu**.
+3. Antes de começar, diga à pessoa qual issue vai pegar e por quê, e espere ela confirmar.
+4. Leia a issue inteira com os comentários (`gh issue view N --comments`) e a parte do design que ela cita.
+5. Prepare o computador **só com o que a tarefa precisa**:
+   - tarefa de tela: Git, gh, Node e `npm install` em `apps/mobile`, sem Python, uv nem Docker;
+   - tarefa de API: Git, gh, Python 3.12, uv e um Postgres (Docker ou um banco grátis no Neon).
+   Nunca peça para mexer na BIOS sem explicar o motivo e a pessoa concordar.
+6. Se a dependência ainda não estiver pronta mas a issue disser que dá para começar antes (por exemplo, com dados de exemplo ou funções puras com testes), faça essa parte num primeiro PR com `Refs #N`. Só o último PR da issue usa `Closes #N`.
+
 ## Regras de branch (OBRIGATÓRIAS)
 
 1. **Antes de qualquer alteração**, rode `git branch --show-current` e diga ao usuário em qual branch você está.
