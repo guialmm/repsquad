@@ -10,7 +10,7 @@ Este arquivo foi feito para ser **entregue à IA** (Antigravity com Claude Opus,
    ```
    Feche e abra o terminal, e depois:
    ```powershell
-   git clone <URL-DO-REPO>
+   git clone https://github.com/guialmm/repsquad.git
    ```
 2. Abra a pasta do projeto no Antigravity.
 3. Cole este prompt no chat da IA:
