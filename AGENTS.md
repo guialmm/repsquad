@@ -9,6 +9,7 @@ App mobile de registro de treinos de musculação, feito por três amigos para p
 - Design completo: `docs/superpowers/specs/2026-11-24-app-treinos-design.md`
 - Backlog: issues no GitHub (fonte em `docs/BACKLOG.md`)
 - Preparar o computador: `docs/SETUP-IA.md`
+- Estratégia de testes: `docs/TESTES.md`
 
 ## Estrutura
 
@@ -107,7 +108,12 @@ Se algo falhar, diga o que falhou. Não diga "pronto" com teste vermelho.
 
 ## Regras de código
 
-- **Testes obrigatórios para lógica do backend** (cálculo de recordes, 1RM, estatísticas, importador de ficha, regras de permissão). Escreva o teste primeiro e veja ele falhar.
+- **Testes obrigatórios**, conforme `docs/TESTES.md` e a seção "Testes exigidos" de cada issue:
+  - regra de negócio da API (recordes, 1RM, estatísticas, importador, permissões): teste unitário escrito **antes** do código; veja ele falhar;
+  - endpoint novo: teste de integração no Postgres com caminho feliz, 422, 401, acesso de outro usuário (404) e recurso inexistente (404);
+  - lógica e telas do app: teste unitário das funções e teste de componente dos estados (carregando, vazio, erro, dados);
+  - bug corrigido: primeiro um teste que reproduz o bug;
+  - a cobertura não pode cair abaixo do mínimo do CI.
 - **Banco de dados:**
   - carga sempre em kg (`weight_kg`); a conversão de unidade é feita só na tela;
   - datas com fuso horário (`timestamptz` / `DateTime(timezone=True)`);
