@@ -19,8 +19,8 @@ Pushups,Flexão de braço,flexão|flexão de braços|apoio
 Dips_-_Chest_Version,Paralelas para peito,mergulho para peito|dips peito|paralela peito
 Straight-Arm_Dumbbell_Pullover,Pullover com halter,pullover
 Barbell_Squat,Agachamento livre com barra,agachamento|agachamento livre|agachamento com barra
-Front_Barbell_Squat,Agachamento frontal com barra,agachamento frontal|frontal com barra
-Smith_Machine_Squat,Agachamento no Smith,agachamento smith|barra guiada
+Front_Barbell_Squat,Agachamento frontal com barra,agachamento frontal
+Smith_Machine_Squat,Agachamento no Smith,agachamento smith|agachamento barra guiada
 Hack_Squat,Agachamento hack,hack|hack 45|hack squat
 Goblet_Squat,Agachamento goblet,goblet|goblet squat
 Wide_Stance_Barbell_Squat,Agachamento sumô com barra,agachamento sumô|sumô com barra
@@ -28,7 +28,7 @@ Plie_Dumbbell_Squat,Agachamento sumô com halter,sumô com halter|agachamento pl
 Bodyweight_Squat,Agachamento livre sem peso,agachamento sem peso|agachamento peso corporal
 Freehand_Jump_Squat,Agachamento com salto,jump squat|squat jump|agachamento saltando
 Split_Squat_with_Dumbbells,Agachamento búlgaro,búlgaro|búlgaro com halter|split squat
-Leg_Press,Leg press 45,leg press|prensa de pernas|prensa
+Leg_Press,Leg press 45,leg press|leg 45|prensa de pernas|prensa
 Narrow_Stance_Leg_Press,Leg press pés juntos,leg press fechado
 Leg_Extensions,Cadeira extensora,extensora|extensora de perna|extensão de joelhos
 Barbell_Lunge,Afundo com barra,afundo|afundo barra|avanço com barra
@@ -37,7 +37,7 @@ Barbell_Walking_Lunge,Passada com barra,passada|avanço caminhando|walking lunge
 Bodyweight_Walking_Lunge,Passada sem peso,passada livre|avanço caminhando sem peso
 Barbell_Step_Ups,Step up com barra,step up|subida no banco com barra
 Dumbbell_Step_Ups,Step up com halteres,subida no banco com halter|step up halter
-Lying_Leg_Curls,Mesa flexora,flexora deitado|leg curl deitado
+Lying_Leg_Curls,Mesa flexora,flexora|flexora deitado|leg curl deitado
 Seated_Leg_Curl,Cadeira flexora,flexora sentado|leg curl sentado
 Standing_Leg_Curl,Flexora em pé,flexora vertical|flexora unilateral
 Ball_Leg_Curl,Flexão de pernas na bola,flexora na bola|leg curl bola
@@ -53,7 +53,7 @@ Glute_Kickback,Coice de glúteo no solo,coice|glúteo 4 apoios|coice 4 apoios
 One-Legged_Cable_Kickback,Coice de glúteo na polia,coice no cabo|glúteo na polia|kickback no cabo
 Thigh_Abductor,Cadeira abdutora,abdutora|abdução de quadril
 Thigh_Adductor,Cadeira adutora,adutora|adução de quadril
-Standing_Calf_Raises,Panturrilha em pé na máquina,panturrilha em pé|gêmeos em pé|panturrilha máquina
+Standing_Calf_Raises,Panturrilha em pé na máquina,panturrilha|panturrilha em pé|gêmeos em pé|panturrilha máquina
 Seated_Calf_Raise,Panturrilha sentado (banco sóleo),panturrilha sentado|gêmeos sentado|sóleo
 Calf_Press_On_The_Leg_Press_Machine,Panturrilha no leg press,panturrilha leg press|gêmeos no leg press
 Standing_Dumbbell_Calf_Raise,Panturrilha em pé com halteres,panturrilha com halter
@@ -66,7 +66,7 @@ Pullups,Barra fixa pronada,barra fixa|pull up|pull-up|barra fixa aberta
 Chin-Up,Barra fixa supinada,chin up|chin-up|barra fixa fechada
 Weighted_Pull_Ups,Barra fixa com carga,pull up com peso|barra fixa com peso
 Band_Assisted_Pull-Up,Barra fixa com elástico,barra assistida|pull up com elástico
-Wide-Grip_Lat_Pulldown,Puxada frontal aberta,puxada frontal|pulley frente|puxada aberta|lat pulldown
+Wide-Grip_Lat_Pulldown,Puxada frontal aberta,puxada frontal|puxada alta|pulley frente|puxada aberta|lat pulldown
 Close-Grip_Front_Lat_Pulldown,Puxada frontal fechada,puxada fechada|pulley fechado
 V-Bar_Pulldown,Puxada com triângulo,puxada triângulo|pulley triângulo
 Underhand_Cable_Pulldowns,Puxada supinada,pulley supinado|puxada invertida
@@ -89,7 +89,7 @@ Standing_Dumbbell_Upright_Row,Remada alta com halteres,remada alta com halter
 Barbell_Shoulder_Press,Desenvolvimento sentado com barra,desenvolvimento com barra|desenv. sentado com barra
 Standing_Military_Press,Desenvolvimento militar em pé,desenvolvimento militar|desenvolvimento em pé com barra|overhead press
 Seated_Barbell_Military_Press,Desenvolvimento por trás com barra,desenvolvimento nuca|militar por trás
-Dumbbell_Shoulder_Press,Desenvolvimento sentado com halteres,desenvolvimento com halteres|desenv. com halter
+Dumbbell_Shoulder_Press,Desenvolvimento sentado com halteres,desenvolvimento|desenvolvimento com halteres|desenv. com halter
 Standing_Dumbbell_Press,Desenvolvimento em pé com halteres,desenv. em pé com halter
 Arnold_Dumbbell_Press,Desenvolvimento Arnold,arnold press|arnold
 Leverage_Shoulder_Press,Desenvolvimento articulado (máquina),desenvolvimento máquina|shoulder press máquina
@@ -135,7 +135,7 @@ Cable_One_Arm_Tricep_Extension,Tríceps unilateral invertido na polia,tríceps u
 EZ-Bar_Skullcrusher,Tríceps testa com barra W,tríceps testa|testa barra W|skull crusher
 Lying_Triceps_Press,Tríceps testa com barra,tríceps testa deitado|testa com barra reta
 Close-Grip_Barbell_Bench_Press,Supino fechado com barra,supino fechado|supino pegada fechada
-Cable_Rope_Overhead_Triceps_Extension,Tríceps testa na polia (corda),tríceps francês na polia|tríceps testa corda|tríceps francês corda|tríceps overhead
+Cable_Rope_Overhead_Triceps_Extension,Tríceps francês na polia (corda),tríceps francês na polia|tríceps testa na polia|tríceps testa corda|tríceps francês corda|tríceps overhead
 Standing_Dumbbell_Triceps_Extension,Tríceps francês em pé com halter,tríceps francês|francês com halter
 Seated_Triceps_Press,Tríceps francês sentado com halter,tríceps francês sentado|francês sentado
 Dumbbell_One-Arm_Triceps_Extension,Tríceps francês unilateral com halter,tríceps francês unilateral|francês unilateral
@@ -149,7 +149,7 @@ Sit-Up,Abdominal completo (sit-up),sit up|sit-up|abdominal remador
 Weighted_Crunches,Abdominal com carga,crunch com peso|abdominal com peso
 Ab_Crunch_Machine,Abdominal na máquina,abdominal máquina|crunch máquina
 Cable_Crunch,Abdominal na polia (corda),abdominal no cabo|crunch no cabo|abdominal corda|crunch corda
-Reverse_Crunch,Abdominal infra no solo (reverso),abdominal reverso|crunch reverso|infra no solo
+Reverse_Crunch,Abdominal infra no solo (reverso),abdominal infra|abdominal reverso|crunch reverso|infra no solo
 Hanging_Leg_Raise,Abdominal infra na barra fixa,elevação de pernas na barra|abdominal na barra|leg raise
 Flat_Bench_Lying_Leg_Raise,Abdominal infra no banco,elevação de pernas no banco|infra no banco
 Knee_Hip_Raise_On_Parallel_Bars,Abdominal infra nas paralelas,elevação de joelhos nas paralelas|abdominal paralelas
