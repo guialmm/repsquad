@@ -1,0 +1,41 @@
+[
+  {
+    "name": "Barbell Bench Press - Medium Grip",
+    "force": "push",
+    "level": "beginner",
+    "mechanic": "compound",
+    "equipment": "barbell",
+    "primaryMuscles": ["chest"],
+    "secondaryMuscles": ["shoulders", "triceps"],
+    "instructions": ["Lie back on a flat bench.", "Press the bar up."],
+    "category": "strength",
+    "images": ["Barbell_Bench_Press_-_Medium_Grip/0.jpg", "Barbell_Bench_Press_-_Medium_Grip/1.jpg"],
+    "id": "Barbell_Bench_Press_-_Medium_Grip"
+  },
+  {
+    "name": "Barbell Squat",
+    "force": "push",
+    "level": "beginner",
+    "mechanic": "compound",
+    "equipment": "barbell",
+    "primaryMuscles": ["quadriceps"],
+    "secondaryMuscles": ["calves", "glutes", "hamstrings", "lower back"],
+    "instructions": ["Set the bar on your back.", "Squat down and stand up."],
+    "category": "strength",
+    "images": ["Barbell_Squat/0.jpg"],
+    "id": "Barbell_Squat"
+  },
+  {
+    "name": "90/90 Hamstring",
+    "force": "push",
+    "level": "beginner",
+    "mechanic": null,
+    "equipment": null,
+    "primaryMuscles": ["hamstrings"],
+    "secondaryMuscles": [],
+    "instructions": ["Lie on your back."],
+    "category": "stretching",
+    "images": [],
+    "id": "90_90_Hamstring"
+  }
+]
