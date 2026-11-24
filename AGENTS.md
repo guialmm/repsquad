@@ -32,6 +32,7 @@ API (rodar dentro de `apps/api`):
 | Formatação (checar / aplicar) | `uv run ruff format --check .` / `uv run ruff format .` |
 | Aplicar migrações | `uv run alembic upgrade head` |
 | Criar migração | `uv run alembic revision --autogenerate -m "descricao"` |
+| Popular a biblioteca de exercícios (baixa a free-exercise-db; pode rodar de novo) | `uv run python -m app.seed.exercises` |
 | Atualizar o openapi.json | `uv run python -m app.export_openapi` |
 | Adicionar dependência | `uv add <pacote>` (dev: `uv add --dev <pacote>`) |
 

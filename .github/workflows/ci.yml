@@ -52,6 +52,11 @@ jobs:
           uv run alembic upgrade head
           uv run alembic downgrade base
           uv run alembic upgrade head
+      - name: Seed no Postgres (com os dados de exemplo dos testes, 2x para provar que não duplica)
+        run: |
+          for i in 1 2; do
+            uv run python -m app.seed.exercises --source tests/fixtures/exercises_sample.json --translations tests/fixtures/exercises_pt_br_sample.csv
+          done
       - name: openapi.json está atualizado?
         run: |
           uv run python -m app.export_openapi

@@ -92,6 +92,7 @@ Na raiz do repositório:
    ```powershell
    uv sync
    uv run alembic upgrade head
+   uv run python -m app.seed.exercises
    uv run fastapi dev app/main.py --host 0.0.0.0
    ```
    Verifique abrindo `http://localhost:8000/health` no navegador: deve mostrar `{"status":"ok"}`. A documentação interativa fica em `http://localhost:8000/docs`.
