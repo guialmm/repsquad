@@ -85,10 +85,10 @@ Cada funcionalidade traz os próprios testes: quem faz a issue escreve os testes
 
 | Tarefa | Quem | Dificuldade |
 |---|---|---|
-| Infraestrutura de testes da API (Postgres, fixtures, cobertura) | guialmm | 🔴 difícil |
-| Infraestrutura de testes do app (`jest-expo`, Testing Library, cobertura) | guialmm | 🟡 média |
-| Segurança e qualidade no CI (regras S do ruff, `pip-audit`, `npm audit`) | guialmm | 🟡 média |
-| Suíte de segurança da API (login e acesso entre usuários em **todos** os endpoints) | novo integrante | 🟡 média |
-| Testes de contrato com Schemathesis | PedroSouza347 | 🔴 difícil |
-| Teste de carga com Locust | novo integrante | 🔴 difícil |
-| Ponta a ponta com Maestro (fluxo principal no Android) | guialmm, com revisão do LGvinagre | 🔴 difícil |
+| #28 Infraestrutura de testes da API (Postgres, fixtures, cobertura) | guialmm | 🔴 difícil |
+| #29 Infraestrutura de testes do app (`jest-expo`, Testing Library, cobertura) | guialmm | 🟡 média |
+| #30 Segurança e qualidade no CI (regras S do ruff, `pip-audit`, `npm audit`) | guialmm | 🟡 média |
+| #31 Suíte de segurança da API (login e acesso entre usuários em **todos** os endpoints) | novo integrante | 🟡 média |
+| #32 Testes de contrato com Schemathesis | PedroSouza347 | 🔴 difícil |
+| #33 Teste de carga com Locust | novo integrante | 🔴 difícil |
+| #34 Ponta a ponta com Maestro (fluxo principal no Android) | guialmm, com revisão do LGvinagre | 🔴 difícil |
