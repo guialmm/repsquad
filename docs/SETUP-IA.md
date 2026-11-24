@@ -109,6 +109,14 @@ Só diga que terminou quando **todos** estiverem ok, mostrando a saída de cada 
 - [ ] Em `apps/mobile`: `npm run lint` e `npm run typecheck` sem erros
 - [ ] **No celular**, pelo Expo Go, a tela mostra **"API: conectada"** (confirme com o usuário)
 
+### Depois do setup: comandos do dia a dia
+
+A lista completa está no `AGENTS.md`. Os mais usados:
+
+- API (`apps/api`): `uv run fastapi dev app/main.py --host 0.0.0.0`, `uv run pytest`, `uv run ruff check .`
+- App (`apps/mobile`): `npx expo start`, `npm run lint`, `npm run typecheck`
+- Quando a API muda: `uv run python -m app.export_openapi` (em `apps/api`) e depois `npm run gen:api` (em `apps/mobile`), para o app receber os tipos novos
+
 ### Problemas comuns
 
 | Sintoma | Causa provável | Solução |
