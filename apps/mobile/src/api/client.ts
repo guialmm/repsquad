@@ -8,6 +8,20 @@ export const API_URL = process.env.EXPO_PUBLIC_API_URL ?? "http://localhost:8000
 
 const HEALTH_TIMEOUT_MS = 10_000;
 
+let authToken: string | null = null;
+
+export function setAuthToken(token: string | null) {
+  authToken = token;
+}
+
+export async function apiFetch(path: string, init: RequestInit = {}): Promise<Response> {
+  const headers = new Headers(init.headers);
+  if (authToken) {
+    headers.set("Authorization", `Bearer ${authToken}`);
+  }
+  return fetch(`${API_URL}${path}`, { ...init, headers });
+}
+
 type HealthResponse =
   paths["/health"]["get"]["responses"][200]["content"]["application/json"];
 
@@ -16,7 +30,7 @@ export async function getHealth(): Promise<{ status: string }> {
   const timeoutId = setTimeout(() => controller.abort(), HEALTH_TIMEOUT_MS);
 
   try {
-    const response = await fetch(`${API_URL}/health`, {
+    const response = await apiFetch("/health", {
       signal: controller.signal,
     });
     if (!response.ok) {

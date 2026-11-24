@@ -1,8 +1,9 @@
 import Ionicons from "@expo/vector-icons/Ionicons";
-import { Tabs } from "expo-router";
+import { Redirect, Tabs } from "expo-router";
 import type { ComponentProps } from "react";
-import type { ColorValue } from "react-native";
+import { ActivityIndicator, View, type ColorValue } from "react-native";
 
+import { useAuth } from "@/auth/auth-context";
 import { useTheme } from "@/theme";
 
 type IoniconName = ComponentProps<typeof Ionicons>["name"];
@@ -20,7 +21,27 @@ function tabIcon(focusedName: IoniconName, unfocusedName: IoniconName) {
 }
 
 export default function TabsLayout() {
+  const { token, isLoading } = useAuth();
   const { colors, fontSize } = useTheme();
+
+  if (isLoading) {
+    return (
+      <View
+        style={{
+          flex: 1,
+          alignItems: "center",
+          justifyContent: "center",
+          backgroundColor: colors.background,
+        }}
+      >
+        <ActivityIndicator color={colors.primary} />
+      </View>
+    );
+  }
+
+  if (!token) {
+    return <Redirect href="/login" />;
+  }
 
   return (
     <Tabs
