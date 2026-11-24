@@ -1,0 +1,163 @@
+source_id,name_pt,aliases
+Barbell_Bench_Press_-_Medium_Grip,Supino reto com barra,supino|supino reto|supino com barra|supino reto com barra
+Barbell_Incline_Bench_Press_-_Medium_Grip,Supino inclinado com barra,supino inclinado|inclinado com barra
+Decline_Barbell_Bench_Press,Supino declinado com barra,supino declinado|declinado com barra
+Dumbbell_Bench_Press,Supino reto com halteres,supino com halter|supino reto com halter
+Incline_Dumbbell_Press,Supino inclinado com halteres,supino inclinado com halter|inclinado com halter
+Decline_Dumbbell_Bench_Press,Supino declinado com halteres,supino declinado com halter|declinado com halter
+Machine_Bench_Press,Supino na máquina,supino máquina|chest press
+Leverage_Chest_Press,Supino reto articulado,supino articulado|articulado reto
+Dumbbell_Flyes,Crucifixo reto com halteres,crucifixo|crucifixo reto|fly
+Incline_Dumbbell_Flyes,Crucifixo inclinado com halteres,crucifixo inclinado|fly inclinado
+Decline_Dumbbell_Flyes,Crucifixo declinado com halteres,crucifixo declinado|fly declinado
+Flat_Bench_Cable_Flyes,Crucifixo reto no cabo,crucifixo no cabo|fly no cabo
+Incline_Cable_Flye,Crucifixo inclinado no cabo,crucifixo inclinado cabo|fly inclinado no cabo
+Cable_Crossover,Crossover polia alta,crossover|cross over|cruzamento de cabos
+Low_Cable_Crossover,Crossover polia baixa,crossover baixo|cruzamento baixo
+Butterfly,Voador (Peck Deck),peck deck|pec deck|voador|crucifixo máquina
+Pushups,Flexão de braço,flexão|flexão de braços|apoio
+Dips_-_Chest_Version,Paralelas para peito,mergulho para peito|dips peito|paralela peito
+Straight-Arm_Dumbbell_Pullover,Pullover com halter,pullover
+Barbell_Squat,Agachamento livre com barra,agachamento|agachamento livre|agachamento com barra
+Front_Barbell_Squat,Agachamento frontal com barra,agachamento frontal|frontal com barra
+Smith_Machine_Squat,Agachamento no Smith,agachamento smith|barra guiada
+Hack_Squat,Agachamento hack,hack|hack 45|hack squat
+Goblet_Squat,Agachamento goblet,goblet|goblet squat
+Wide_Stance_Barbell_Squat,Agachamento sumô com barra,agachamento sumô|sumô com barra
+Plie_Dumbbell_Squat,Agachamento sumô com halter,sumô com halter|agachamento plié
+Bodyweight_Squat,Agachamento livre sem peso,agachamento sem peso|agachamento peso corporal
+Freehand_Jump_Squat,Agachamento com salto,jump squat|squat jump|agachamento saltando
+Split_Squat_with_Dumbbells,Agachamento búlgaro,búlgaro|búlgaro com halter|split squat
+Leg_Press,Leg press 45,leg press|prensa de pernas|prensa
+Narrow_Stance_Leg_Press,Leg press pés juntos,leg press fechado
+Leg_Extensions,Cadeira extensora,extensora|extensora de perna|extensão de joelhos
+Barbell_Lunge,Afundo com barra,afundo|afundo barra|avanço com barra
+Dumbbell_Lunges,Afundo com halteres,afundo com halter|avanço com halter
+Barbell_Walking_Lunge,Passada com barra,passada|avanço caminhando|walking lunge
+Bodyweight_Walking_Lunge,Passada sem peso,passada livre|avanço caminhando sem peso
+Barbell_Step_Ups,Step up com barra,step up|subida no banco com barra
+Dumbbell_Step_Ups,Step up com halteres,subida no banco com halter|step up halter
+Lying_Leg_Curls,Mesa flexora,flexora deitado|leg curl deitado
+Seated_Leg_Curl,Cadeira flexora,flexora sentado|leg curl sentado
+Standing_Leg_Curl,Flexora em pé,flexora vertical|flexora unilateral
+Ball_Leg_Curl,Flexão de pernas na bola,flexora na bola|leg curl bola
+Floor_Glute-Ham_Raise,Flexão nórdica,flexora nórdica|nordic curl|nórdica
+Stiff-Legged_Barbell_Deadlift,Stiff com barra,stiff|stiff barra
+Stiff-Legged_Dumbbell_Deadlift,Stiff com halteres,stiff com halter
+Romanian_Deadlift,Levantamento terra romeno (RDL),rdl|terra romeno|romeno
+Good_Morning,Bom dia (Good Morning),bom dia|good morning
+Barbell_Hip_Thrust,Elevação pélvica com barra,elevação pélvica|hip thrust|elevação de quadril
+Barbell_Glute_Bridge,Elevação pélvica no solo com barra,ponte de glúteo|glute bridge
+Single_Leg_Glute_Bridge,Elevação pélvica unilateral no solo,ponte unilateral|glute bridge unilateral
+Glute_Kickback,Coice de glúteo no solo,coice|glúteo 4 apoios|coice 4 apoios
+One-Legged_Cable_Kickback,Coice de glúteo na polia,coice no cabo|glúteo na polia|kickback no cabo
+Thigh_Abductor,Cadeira abdutora,abdutora|abdução de quadril
+Thigh_Adductor,Cadeira adutora,adutora|adução de quadril
+Standing_Calf_Raises,Panturrilha em pé na máquina,panturrilha em pé|gêmeos em pé|panturrilha máquina
+Seated_Calf_Raise,Panturrilha sentado (banco sóleo),panturrilha sentado|gêmeos sentado|sóleo
+Calf_Press_On_The_Leg_Press_Machine,Panturrilha no leg press,panturrilha leg press|gêmeos no leg press
+Standing_Dumbbell_Calf_Raise,Panturrilha em pé com halteres,panturrilha com halter
+Donkey_Calf_Raises,Panturrilha burrinho,panturrilha donkey|donkey calf raise
+Smith_Machine_Calf_Raise,Panturrilha no Smith,panturrilha smith
+Barbell_Deadlift,Levantamento terra,terra|deadlift|terra convencional
+Sumo_Deadlift,Levantamento terra sumô,terra sumô|deadlift sumô
+Trap_Bar_Deadlift,Levantamento terra com barra hexagonal,terra trap bar|hex bar deadlift
+Pullups,Barra fixa pronada,barra fixa|pull up|pull-up|barra fixa aberta
+Chin-Up,Barra fixa supinada,chin up|chin-up|barra fixa fechada
+Weighted_Pull_Ups,Barra fixa com carga,pull up com peso|barra fixa com peso
+Band_Assisted_Pull-Up,Barra fixa com elástico,barra assistida|pull up com elástico
+Wide-Grip_Lat_Pulldown,Puxada frontal aberta,puxada frontal|pulley frente|puxada aberta|lat pulldown
+Close-Grip_Front_Lat_Pulldown,Puxada frontal fechada,puxada fechada|pulley fechado
+V-Bar_Pulldown,Puxada com triângulo,puxada triângulo|pulley triângulo
+Underhand_Cable_Pulldowns,Puxada supinada,pulley supinado|puxada invertida
+Straight-Arm_Pulldown,Pulldown na polia,pulldown|pulldown com barra|pullover na polia
+Bent_Over_Barbell_Row,Remada curvada com barra,remada curvada|remada com barra|bent over row
+Reverse_Grip_Bent-Over_Rows,Remada curvada supinada,remada curvada pegada invertida
+Smith_Machine_Bent_Over_Row,Remada curvada no Smith,remada smith
+Bent_Over_Two-Dumbbell_Row,Remada curvada com halteres,remada curvada com halter
+Dumbbell_Incline_Row,Remada no banco inclinado com halteres,remada inclinada|seal row halter
+One-Arm_Dumbbell_Row,Remada serrote,remada unilateral com halter|serrote|remada unilateral
+Seated_Cable_Rows,Remada baixa (triângulo),remada baixa|remada sentada|remada no cabo|pulley baixo
+T-Bar_Row_with_Handle,Remada cavalinho,cavalinho|remada T|t-bar row
+Hyperextensions_Back_Extensions,Extensão lombar (banco romano),hiperextensão lombar|banco romano|lombar
+Superman,Superman (lombar no solo),superman|extensão lombar no solo
+Barbell_Shrug,Encolhimento com barra,encolhimento|shrug|encolhimento de ombros
+Dumbbell_Shrug,Encolhimento com halteres,encolhimento com halter|shrug com halter
+Cable_Shrugs,Encolhimento na polia,encolhimento no cabo|shrug no cabo
+Upright_Barbell_Row,Remada alta com barra,remada alta|upright row
+Standing_Dumbbell_Upright_Row,Remada alta com halteres,remada alta com halter
+Barbell_Shoulder_Press,Desenvolvimento sentado com barra,desenvolvimento com barra|desenv. sentado com barra
+Standing_Military_Press,Desenvolvimento militar em pé,desenvolvimento militar|desenvolvimento em pé com barra|overhead press
+Seated_Barbell_Military_Press,Desenvolvimento por trás com barra,desenvolvimento nuca|militar por trás
+Dumbbell_Shoulder_Press,Desenvolvimento sentado com halteres,desenvolvimento com halteres|desenv. com halter
+Standing_Dumbbell_Press,Desenvolvimento em pé com halteres,desenv. em pé com halter
+Arnold_Dumbbell_Press,Desenvolvimento Arnold,arnold press|arnold
+Leverage_Shoulder_Press,Desenvolvimento articulado (máquina),desenvolvimento máquina|shoulder press máquina
+Side_Lateral_Raise,Elevação lateral com halteres,elevação lateral|lateral|lateral raise
+Seated_Side_Lateral_Raise,Elevação lateral sentado,lateral sentado|elevação lateral sentada
+Standing_Low-Pulley_Deltoid_Raise,Elevação lateral na polia (em pé),elevação lateral no cabo|lateral no cabo
+Cable_Seated_Lateral_Raise,Elevação lateral na polia sentado,lateral no cabo sentado
+Lateral_Raise_-_With_Bands,Elevação lateral com elástico,lateral com elástico
+Front_Dumbbell_Raise,Elevação frontal com halteres,elevação frontal|frontal com halter
+Front_Cable_Raise,Elevação frontal na polia,elevação frontal no cabo|frontal no cabo
+Front_Plate_Raise,Elevação frontal com anilha,frontal com anilha
+Reverse_Flyes,Crucifixo inverso com halteres,crucifixo inverso|fly inverso|voador inverso halter
+Reverse_Machine_Flyes,Crucifixo inverso na máquina,voador inverso|peck deck inverso|reverse peck deck
+Cable_Rear_Delt_Fly,Crucifixo inverso na polia,crucifixo inverso no cabo|fly inverso no cabo
+Bent_Over_Low-Pulley_Side_Lateral,Crucifixo inverso unilateral na polia,elevação posterior curvado no cabo|posterior unilateral cabo
+Seated_Bent-Over_Rear_Delt_Raise,Crucifixo inverso sentado com halteres,elevação posterior sentado|posterior sentado
+Face_Pull,Face pull na polia,face pull|puxada para o rosto
+Band_Pull_Apart,Pull apart com elástico,pull apart|abertura com elástico
+External_Rotation,Rotação externa de ombro (manguito),rotação externa|manguito rotador|manguito
+Cable_Internal_Rotation,Rotação interna na polia,rotação interna|manguito interno
+Barbell_Curl,Rosca direta com barra,rosca direta|rosca com barra|bíceps com barra
+EZ-Bar_Curl,Rosca direta com barra W,rosca W|rosca barra W|ez bar curl
+Dumbbell_Bicep_Curl,Rosca direta com halteres,rosca com halter|rosca direta com halter
+Dumbbell_Alternate_Bicep_Curl,Rosca alternada com halteres,rosca alternada|alternada
+Hammer_Curls,Rosca martelo com halteres,rosca martelo|martelo|hammer curl
+Cross_Body_Hammer_Curl,Rosca martelo cruzada,martelo cruzado|cross body curl
+Cable_Hammer_Curls_-_Rope_Attachment,Rosca martelo na polia (corda),rosca martelo no cabo|martelo corda
+Incline_Dumbbell_Curl,Rosca inclinada com halteres (banco 45),rosca inclinada|rosca 45|rosca banco inclinado
+Preacher_Curl,Rosca Scott com barra W,rosca scott|scott|scott com barra|preacher curl
+Two-Arm_Dumbbell_Preacher_Curl,Rosca Scott com halteres,scott com halter|rosca scott halter
+Concentration_Curls,Rosca concentrada,concentrada|rosca concentrada com halter
+Standing_Biceps_Cable_Curl,Rosca direta na polia,rosca no cabo|rosca polia baixa|bíceps no cabo
+Spider_Curl,Rosca spider,spider curl|rosca no banco inclinado pronado
+Machine_Bicep_Curl,Rosca na máquina,rosca máquina|scott máquina
+Reverse_Barbell_Curl,Rosca inversa com barra,rosca inversa|rosca pegada pronada|reverse curl
+Palms-Up_Barbell_Wrist_Curl_Over_A_Bench,Rosca de punho,flexão de punho|wrist curl
+Palms-Down_Wrist_Curl_Over_A_Bench,Rosca de punho invertida,extensão de punho|wrist curl invertido
+Triceps_Pushdown,Tríceps pulley (barra reta),tríceps pulley|pushdown|tríceps na polia|tríceps barra reta
+Triceps_Pushdown_-_Rope_Attachment,Tríceps corda na polia,tríceps corda|tríceps na corda|rope pushdown
+Triceps_Pushdown_-_V-Bar_Attachment,Tríceps pulley (barra V),tríceps barra V|tríceps V
+Reverse_Grip_Triceps_Pushdown,Tríceps pulley invertido (pegada supinada),tríceps invertido|tríceps supinado na polia|pushdown invertido
+Cable_One_Arm_Tricep_Extension,Tríceps unilateral invertido na polia,tríceps unilateral cabo|tríceps unilateral supinado
+EZ-Bar_Skullcrusher,Tríceps testa com barra W,tríceps testa|testa barra W|skull crusher
+Lying_Triceps_Press,Tríceps testa com barra,tríceps testa deitado|testa com barra reta
+Close-Grip_Barbell_Bench_Press,Supino fechado com barra,supino fechado|supino pegada fechada
+Cable_Rope_Overhead_Triceps_Extension,Tríceps testa na polia (corda),tríceps francês na polia|tríceps testa corda|tríceps francês corda|tríceps overhead
+Standing_Dumbbell_Triceps_Extension,Tríceps francês em pé com halter,tríceps francês|francês com halter
+Seated_Triceps_Press,Tríceps francês sentado com halter,tríceps francês sentado|francês sentado
+Dumbbell_One-Arm_Triceps_Extension,Tríceps francês unilateral com halter,tríceps francês unilateral|francês unilateral
+Dips_-_Triceps_Version,Paralelas para tríceps,mergulho para tríceps|dips tríceps|paralela tríceps
+Dip_Machine,Mergulho na máquina,paralela máquina|dip machine
+Bench_Dips,Mergulho no banco,tríceps banco|mergulho banco
+Tricep_Dumbbell_Kickback,Coice de tríceps com halter,coice de tríceps|tríceps coice|kickback tríceps
+Crunches,Abdominal supra (crunch),abdominal|crunch|abdominal supra
+Decline_Crunch,Abdominal declinado,abdominal no banco declinado|crunch declinado
+Sit-Up,Abdominal completo (sit-up),sit up|sit-up|abdominal remador
+Weighted_Crunches,Abdominal com carga,crunch com peso|abdominal com peso
+Ab_Crunch_Machine,Abdominal na máquina,abdominal máquina|crunch máquina
+Cable_Crunch,Abdominal na polia (corda),abdominal no cabo|crunch no cabo|abdominal corda|crunch corda
+Reverse_Crunch,Abdominal infra no solo (reverso),abdominal reverso|crunch reverso|infra no solo
+Hanging_Leg_Raise,Abdominal infra na barra fixa,elevação de pernas na barra|abdominal na barra|leg raise
+Flat_Bench_Lying_Leg_Raise,Abdominal infra no banco,elevação de pernas no banco|infra no banco
+Knee_Hip_Raise_On_Parallel_Bars,Abdominal infra nas paralelas,elevação de joelhos nas paralelas|abdominal paralelas
+Oblique_Crunches,Abdominal oblíquo,oblíquo|abdominal lateral
+Dumbbell_Side_Bend,Flexão lateral de tronco com halter,flexão lateral|inclinação lateral|oblíquo com halter
+Russian_Twist,Rotação russa,russian twist|torção russa|abdominal russo
+Plank,Prancha abdominal,prancha|plank|prancha isométrica
+Dead_Bug,Dead bug (core),dead bug|inseto morto
+Pallof_Press,Pallof press na polia,pallof press|anti-rotação
+Mountain_Climbers,Mountain climber (escalador),mountain climber|escalador
+Farmers_Walk,Caminhada do fazendeiro (Farmer's Walk),farmer walk|farmer's walk|farmer carry
