@@ -3,6 +3,7 @@ import { Pressable, StyleSheet, Text, View } from "react-native";
 
 import { API_URL } from "@/api/client";
 import { useApiHealth, type ApiStatus } from "@/api/health-context";
+import { useAuth } from "@/auth/auth-context";
 import { useTheme } from "@/theme";
 
 function statusColor(status: ApiStatus, colors: ReturnType<typeof useTheme>["colors"]) {
@@ -12,6 +13,7 @@ function statusColor(status: ApiStatus, colors: ReturnType<typeof useTheme>["col
 }
 
 export default function ProfileScreen() {
+  const { user, signOut } = useAuth();
   const { status, refresh } = useApiHealth();
   const { colors, spacing, fontSize, radius } = useTheme();
   const dotColor = statusColor(status, colors);
@@ -27,9 +29,11 @@ export default function ProfileScreen() {
         >
           <Ionicons name="person-outline" size={32} color={colors.primary} />
         </View>
-        <Text style={[styles.title, { color: colors.text, fontSize: fontSize.xl }]}>Perfil</Text>
+        <Text style={[styles.title, { color: colors.text, fontSize: fontSize.xl }]}>
+          {user?.name ?? "Perfil"}
+        </Text>
         <Text style={[styles.description, { color: colors.textMuted, fontSize: fontSize.md }]}>
-          Em breve: seu perfil, metas e preferências.
+          {user?.email ?? "Em breve: seu perfil, metas e preferências."}
         </Text>
       </View>
 
@@ -73,6 +77,22 @@ export default function ProfileScreen() {
           </Pressable>
         )}
       </View>
+
+      <Pressable
+        onPress={signOut}
+        style={[
+          styles.logoutButton,
+          {
+            borderColor: colors.danger,
+            borderRadius: radius.md,
+            paddingVertical: spacing.sm + 4,
+          },
+        ]}
+      >
+        <Text style={[styles.logoutText, { color: colors.danger, fontSize: fontSize.md }]}>
+          Sair da conta
+        </Text>
+      </Pressable>
     </View>
   );
 }
@@ -122,5 +142,12 @@ const styles = StyleSheet.create({
   },
   retryText: {
     fontWeight: "600",
+  },
+  logoutButton: {
+    borderWidth: 1,
+    alignItems: "center",
+  },
+  logoutText: {
+    fontWeight: "700",
   },
 });
