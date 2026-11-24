@@ -13,7 +13,9 @@ OUTPUT = Path(__file__).resolve().parent.parent / "openapi.json"
 
 def main() -> None:
     OUTPUT.write_text(
-        json.dumps(app.openapi(), indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+        json.dumps(app.openapi(), indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+        newline="\n",  # LF também no Windows, para o CI (Linux) não ver diferença
     )
 
 
