@@ -55,6 +55,12 @@ Bibliotecas principais (instaladas pelos gerenciadores, não precisa instalar à
 Observações:
 - O Docker Desktop pode pedir para habilitar o WSL 2 e reiniciar o computador. Peça ao usuário para aceitar e reiniciar, e continue depois.
 - **Login no GitHub:** peça ao usuário para rodar `gh auth login` (GitHub.com → HTTPS → login pelo navegador). Verifique com `gh auth status`.
+- **Identidade do git** (sem isso o primeiro commit falha): peça ao usuário para configurar o próprio nome e o e-mail **anônimo** do GitHub, que aparece em github.com → Settings → Emails, no formato `123456+usuario@users.noreply.github.com`. O repositório é público, então o e-mail pessoal ficaria visível para qualquer um.
+  ```powershell
+  git config --global user.name "Seu Nome"
+  git config --global user.email "123456+usuario@users.noreply.github.com"
+  ```
+  Verifique com `git config --global user.email`. A IA **não** coloca o nome dela aqui (ver `AGENTS.md`).
 - **No celular:** peça ao usuário para instalar o **Expo Go** (Play Store ou App Store).
 
 ### 3. Configurar o projeto
@@ -90,6 +96,7 @@ Na raiz do repositório:
    ```
    Verifique abrindo `http://localhost:8000/health` no navegador: deve mostrar `{"status":"ok"}`. A documentação interativa fica em `http://localhost:8000/docs`.
    Se o Windows perguntar sobre o **firewall** para o Python, peça ao usuário para permitir em **redes privadas**. Sem isso, o celular não alcança a API.
+   **Atenção:** muitas redes Wi-Fi ficam marcadas como **Pública** no Windows, e aí a permissão de rede privada não vale. Confira com `Get-NetConnectionProfile` (campo `NetworkCategory`). Se estiver `Public` e for a rede de casa, peça ao usuário para trocar para Privada: Configurações → Rede e Internet → Wi-Fi → (a rede) → Tipo de perfil de rede → Privada.
 3. App (em `apps/mobile`, em outro terminal):
    ```powershell
    npm install
@@ -123,5 +130,7 @@ A lista completa está no `AGENTS.md`. Os mais usados:
 |---|---|---|
 | Celular mostra "API: sem conexão" | IP errado no `.env`, redes diferentes ou firewall | Confira o IP com `ipconfig`, use a mesma rede Wi-Fi, libere Python/Node no firewall (rede privada) e reinicie o `npx expo start` depois de mudar o `.env` |
 | `docker compose up` falha com porta em uso | Outro Postgres na 5432 | Passo 3.3 (usar 5433) |
+| `alembic upgrade head` dá `password authentication failed for user "treinos"` | Um Postgres instalado no Windows está respondendo na 5432 no lugar do Docker (às vezes os dois sobem sem erro) | Passo 3.3: usar 5433 no `.env` da raiz e na `DATABASE_URL`, depois `docker compose up -d db` de novo |
+| Celular continua "sem conexão" mesmo com o firewall liberado | Rede Wi-Fi marcada como Pública | `Get-NetConnectionProfile`; trocar a rede para Privada (passo 4.2) |
 | `uv`, `node` ou `gh`: "comando não encontrado" logo após instalar | PATH não atualizou | Feche e abra o terminal (ou o Antigravity) |
 | Expo Go não abre o projeto | Rede da faculdade ou do trabalho bloqueia | Tente `npx expo start --tunnel` |
