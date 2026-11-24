@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "App de Treinos",
-    "slug": "app-treinos",
+    "name": "RepSquad",
+    "slug": "repsquad",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "apptreinos",
+    "scheme": "repsquad",
     "userInterfaceStyle": "automatic",
     "ios": {
       "icon": "./assets/expo.icon"

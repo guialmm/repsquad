@@ -2,7 +2,7 @@
 
 - **Data:** 2026-11-24
 - **Status:** rascunho para aprovação
-- **Nome provisório:** `app-treinos` (o nome final do repo e do app ainda está em aberto)
+- **Nome:** RepSquad (repositório `repsquad`)
 - **Pesquisa de base:** `reports/Hevy como referência de app.md`, no workspace do Gui
 
 ## 1. Intenção e o porquê

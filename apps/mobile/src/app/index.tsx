@@ -17,7 +17,7 @@ export default function Index() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>App de Treinos</Text>
+      <Text style={styles.title}>RepSquad</Text>
       <Text>
         API: {status}
         {status === "sem conexão" ? ` (${API_URL})` : ""}

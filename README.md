@@ -1,4 +1,4 @@
-# App de Treinos
+# RepSquad
 
 App mobile para registrar treinos de musculação: fichas e rotinas, séries com carga e repetições, cronômetro de descanso, histórico, recordes e um modo turma para treinar junto com os amigos.
 

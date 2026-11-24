@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from app.config import settings
 
-app = FastAPI(title="app-treinos API")
+app = FastAPI(title="RepSquad API")
 
 app.add_middleware(
     CORSMiddleware,
