@@ -1,0 +1,59 @@
+name: CI
+
+# Sem filtro de caminho de propósito: "api" e "mobile" são checks obrigatórios
+# da main, e um check que não roda deixa o PR travado para sempre.
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  api:
+    name: api
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: apps/api
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: "3.12"
+      - run: uv sync --locked
+      - name: Lint (ruff)
+        run: uv run ruff check .
+      - name: Formatação (ruff format)
+        run: uv run ruff format --check .
+      - name: Testes (pytest)
+        run: uv run pytest
+      - name: openapi.json está atualizado?
+        run: |
+          uv run python -m app.export_openapi
+          git diff --exit-code openapi.json || (echo "::error::Rode 'uv run python -m app.export_openapi' e commite o openapi.json" && exit 1)
+
+  mobile:
+    name: mobile
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: apps/mobile
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: npm
+          cache-dependency-path: apps/mobile/package-lock.json
+      - run: npm ci
+      - name: Tipos da API estão atualizados?
+        run: |
+          npm run gen:api
+          git diff --exit-code src/api/schema.d.ts || (echo "::error::Rode 'npm run gen:api' e commite o schema.d.ts" && exit 1)
+      - name: Lint (ESLint)
+        run: npm run lint
+      - name: Tipos (tsc)
+        run: npm run typecheck
