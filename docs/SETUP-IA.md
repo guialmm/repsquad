@@ -55,10 +55,10 @@ Bibliotecas principais (instaladas pelos gerenciadores, não precisa instalar à
 Observações:
 - O Docker Desktop pode pedir para habilitar o WSL 2 e reiniciar o computador. Peça ao usuário para aceitar e reiniciar, e continue depois.
 - **Login no GitHub:** peça ao usuário para rodar `gh auth login` (GitHub.com → HTTPS → login pelo navegador). Verifique com `gh auth status`.
-- **Identidade do git** (sem isso o primeiro commit falha): peça ao usuário para configurar o próprio nome e o e-mail **anônimo** do GitHub, que aparece em github.com → Settings → Emails, no formato `123456+usuario@users.noreply.github.com`. O repositório é público, então o e-mail pessoal ficaria visível para qualquer um.
+- **Identidade do git** (sem isso o primeiro commit falha): peça ao usuário para configurar o próprio nome e o e-mail que ele quiser usar. Pode ser o e-mail de sempre (o mesmo da conta do GitHub, para os commits aparecerem no perfil). Quem preferir esconder o e-mail, já que o repositório é público, pode usar o e-mail anônimo do GitHub, que aparece em github.com → Settings → Emails, no formato `123456+usuario@users.noreply.github.com`.
   ```powershell
   git config --global user.name "Seu Nome"
-  git config --global user.email "123456+usuario@users.noreply.github.com"
+  git config --global user.email "seu-email@exemplo.com"
   ```
   Verifique com `git config --global user.email`. A IA **não** coloca o nome dela aqui (ver `AGENTS.md`).
 - **No celular:** peça ao usuário para instalar o **Expo Go** (Play Store ou App Store).
