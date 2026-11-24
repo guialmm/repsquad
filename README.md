@@ -41,6 +41,7 @@ As regras completas estão no [`AGENTS.md`](AGENTS.md), que o Antigravity e o Cl
 - **Nunca commita na `main`.**
 - **Pedido fora do escopo da branch atual:** a IA salva o trabalho em andamento (commit ou stash), cria ou troca para a branch certa sozinha e **avisa** onde o trabalho anterior ficou. Ela nunca descarta alterações.
 - Roda lint, tipos e testes antes de dizer que terminou, e escreve a descrição do PR em português simples.
+- **A IA nunca se coloca como autora ou coautora**: nada de `Co-Authored-By: Claude`, "Generated with ..." ou assinatura de IA em commits e PRs. Os commits são de quem está usando a IA.
 
 ## Documentos
 
