@@ -28,7 +28,9 @@ API (rodar dentro de `apps/api`):
 |---|---|
 | Instalar dependências | `uv sync` |
 | Subir a API (acessível pelo celular) | `uv run fastapi dev app/main.py --host 0.0.0.0` |
-| Testes | `uv run pytest` |
+| Testes (os de integração precisam do Postgres: `docker compose up -d db`) | `uv run pytest` |
+| Só os testes rápidos, sem banco | `uv run pytest -m "not integration"` |
+| Testes com cobertura (o CI exige 80%) | `uv run pytest --cov --cov-fail-under=80` |
 | Lint | `uv run ruff check .` |
 | Formatação (checar / aplicar) | `uv run ruff format --check .` / `uv run ruff format .` |
 | Aplicar migrações | `uv run alembic upgrade head` |

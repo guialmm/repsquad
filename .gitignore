@@ -17,6 +17,11 @@ __pycache__/
 .venv/
 .pytest_cache/
 .ruff_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.hypothesis/
 
 # Sistema / ferramentas
 .DS_Store
