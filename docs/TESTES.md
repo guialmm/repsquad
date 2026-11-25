@@ -65,10 +65,38 @@ A dificuldade é para quem nunca escreveu aquele tipo de teste. Com a infraestru
 ## Como os testes da API usam o banco
 
 - **Unitário:** sem banco. Se a função precisa de dados, ela recebe os dados como parâmetro.
-- **Integração:** Postgres de verdade (o mesmo do `docker compose`, num banco separado `treinos_test`, ou um banco de teste no Neon). Cada teste roda dentro de uma transação desfeita no final, então um teste não suja o outro e tudo continua rápido.
-- No CI, o Postgres sobe sozinho. Na sua máquina, sem Postgres, os testes de integração são **pulados com aviso** e só os unitários rodam; o CI roda todos.
+- **Integração:** Postgres de verdade. Por padrão é o mesmo Postgres do `docker compose`, num banco separado com o nome terminado em `_test` (`treinos_test`), criado sozinho. Para usar outro (por exemplo, um banco de teste no Neon), defina `TEST_DATABASE_URL`; o nome do banco precisa ter `test`, porque ele é **apagado e recriado** a cada execução.
+- O banco de teste é recriado e migrado com o Alembic no começo de cada execução. Cada teste roda dentro de uma transação desfeita no final, então um teste não suja o outro e tudo continua rápido. Pode chamar `db.commit()` normalmente.
+- No CI, o Postgres sobe sozinho, e ficar sem ele é erro. Na sua máquina, sem Postgres, os testes de integração são **pulados com aviso** e só os unitários rodam.
+- O teste que usa a fixture `db` ou `client` é marcado como `integration` sozinho. `uv run pytest -m "not integration"` roda só os rápidos.
 
-Marcadores do `pytest`: `@pytest.mark.integration` para os que usam banco. `uv run pytest -m "not integration"` roda só os rápidos.
+### Ferramentas prontas (em `apps/api/tests/`)
+
+| O quê | Para quê |
+|---|---|
+| fixture `db` | sessão do SQLAlchemy no Postgres de teste |
+| fixture `client` | cliente HTTP da API, usando a mesma sessão `db` (o que o teste grava, a API vê) |
+| `factories.py` | `make_exercise(db, ...)` cria um registro válido mudando só o que importa no teste. Cada tabela nova ganha a sua fábrica ali |
+| `test_normalize_alias_properties.py` | modelo de teste de propriedades com Hypothesis |
+
+As fixtures `user` e `auth_client` (já logado) chegam com o login (#4).
+
+### Modelo de teste de integração
+
+```python
+from tests.factories import make_exercise
+
+
+def test_busca_encontra_pelo_sinonimo_sem_acento(client, db):
+    make_exercise(db, name_pt="Supino reto com barra", aliases=["supino"])
+
+    response = client.get("/exercises", params={"q": "SUPINO"})
+
+    assert response.status_code == 200
+    assert [e["name"] for e in response.json()["items"]] == ["Supino reto com barra"]
+```
+
+Monte só os dados que o teste precisa (com as fábricas), chame a API pelo `client` e confira a resposta e, quando fizer sentido, o que ficou gravado no banco pelo `db`.
 
 ## Quando cada coisa roda
 
