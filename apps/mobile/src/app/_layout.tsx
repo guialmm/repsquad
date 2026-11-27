@@ -24,6 +24,8 @@ export default function RootLayout() {
           >
             <Stack.Screen name="exercises/[id]" options={{ headerShown: true }} />
             <Stack.Screen name="exercises/new" options={{ headerShown: true }} />
+            <Stack.Screen name="history/[id]" options={{ headerShown: true }} />
+            <Stack.Screen name="history/exercise/[id]" options={{ headerShown: true }} />
           </Stack>
         </ExercisesProvider>
       </ApiHealthProvider>
