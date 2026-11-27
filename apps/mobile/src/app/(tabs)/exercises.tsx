@@ -152,7 +152,7 @@ export default function ExercisesScreen() {
         }
         renderItem={({ item }) => (
           <Pressable
-            onPress={() => router.push(`/exercises/${item.id}`)}
+            onPress={() => router.push({ pathname: "/exercises/[id]", params: { id: item.id } })}
             style={[
               styles.card,
               {
