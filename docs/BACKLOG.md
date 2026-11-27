@@ -1,6 +1,6 @@
 # Backlog da v1 (6 semanas)
 
-Fonte das issues do GitHub. Cada seção abaixo virou uma issue. Se mudar algo aqui, atualize a issue também (ou o contrário).
+> **Este é o backlog original da etapa 1.** Desde a organização em etapas, a fonte da verdade são as **issues e os milestones do GitHub** (Etapa 1 a 4), com responsável, dificuldade e dependências em cada issue. Este arquivo fica como registro de onde tudo começou e não é mais atualizado.
 
 Como pegar uma tarefa: escolha uma issue aberta, atribua a você, crie a branch (`feat/...`) a partir da `main` atualizada e abra o PR com `Closes #N`. Detalhes no [README](../README.md) e no [AGENTS.md](../AGENTS.md). As decisões de produto estão no [design](superpowers/specs/2026-11-24-app-treinos-design.md).
 

@@ -57,13 +57,14 @@ Banco (na raiz do repo): `docker compose up -d db`
 Quando a pessoa pedir algo como "pega minha próxima tarefa":
 
 1. Descubra quem é (`gh api user -q .login`) e liste as issues dela: `gh issue list --assignee @me --state open`.
-2. Cada issue tem a seção **"Quem faz e do que depende"**. Escolha a de menor semana (etiqueta `semana-N`) cujas dependências já estão prontas, ou seja, com a issue fechada (`gh issue view N --json state`). Se a issue tiver duas pessoas, faça **só a parte de quem pediu**.
+2. O projeto anda em **etapas**, que são os milestones do GitHub: 1. App funcionando, 2. Design e experiência, 3. Qualidade e operação, 4. Novidades. Pegue sempre a issue da **menor etapa** que tenha as dependências prontas (issue fechada: `gh issue view N --json state`). Dentro da etapa 1, a etiqueta `semana-N` sugere a ordem. Cada issue mostra no topo a etapa e a dificuldade, e tem a seção **"Quem faz e do que depende"**. Se a issue tiver duas pessoas, faça **só a parte de quem pediu**.
 3. Antes de começar, diga à pessoa qual issue vai pegar e por quê, e espere ela confirmar.
 4. Leia a issue inteira com os comentários (`gh issue view N --comments`) e a parte do design que ela cita.
 5. Prepare o computador **só com o que a tarefa precisa**:
    - tarefa de tela: Git, gh, Node e `npm install` em `apps/mobile`, sem Python, uv nem Docker;
    - tarefa de API: Git, gh, Python 3.12, uv e um Postgres (Docker ou um banco grátis no Neon).
    Nunca peça para mexer na BIOS sem explicar o motivo e a pessoa concordar.
+   **Tarefa de tela nunca exige Docker.** Se ela precisar da API e a API de desenvolvimento ainda não estiver no ar, use dados de exemplo e avise; não instale Docker nem peça para mexer na BIOS. Se aparecer uma tarefa de tela que realmente precise de Docker, avise a pessoa: o combinado é ela ir para o guialmm.
 6. Se a dependência ainda não estiver pronta mas a issue disser que dá para começar antes (por exemplo, com dados de exemplo ou funções puras com testes), faça essa parte num primeiro PR com `Refs #N`. Só o último PR da issue usa `Closes #N`.
 
 ## Regras de branch (OBRIGATÓRIAS)
